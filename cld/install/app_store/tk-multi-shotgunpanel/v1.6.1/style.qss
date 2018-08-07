@@ -1,0 +1,270 @@
+/*
+Copyright (c) 2015 Shotgun Software Inc.
+ 
+CONFIDENTIAL AND PROPRIETARY
+ 
+This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit 
+Source Code License included in this distribution package. See LICENSE.
+By accessing, using, copying or modifying this work you indicate your 
+agreement to the Shotgun Pipeline Toolkit Source Code License. All rights 
+not expressly granted therein are reserved by Shotgun Software Inc.
+*/
+
+/* Use open sans font across the app if core supports it */
+QWidget {
+    font-family: "Open Sans";
+    font-style: "Regular";
+}
+
+/* Get rid of borders for main Listing Views */
+QListView, QTableView, QTreeView, QScrollArea, QMenu {
+    border: none;
+}
+
+QMenu::item {
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+QMenu::item:selected {
+    background-color: rgb(24, 167, 227, 75);
+    border: 1px solid {{SG_HIGHLIGHT_COLOR}};
+}
+
+QMenu::separator {
+    height: 2px;
+    background: #888;
+    margin: 4px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+/****************************************************************/
+/* Main tab section                                             */
+
+QTabWidget::pane {
+    border-top: 1px solid rgb(255, 255, 255, 20);
+    padding-top: 8px;
+}
+
+
+/* Style the tab using the tab sub-control. */
+QTabBar::tab {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 0px;
+    border-bottom: 2px solid rgb(255, 255, 255, 5);
+}
+
+
+QTabBar::tab:hover {
+    color: {{SG_HIGHLIGHT_COLOR}};
+}
+
+QTabBar::tab:selected {
+    color: {{SG_HIGHLIGHT_COLOR}};
+    border-bottom: 2px solid {{SG_HIGHLIGHT_COLOR}};
+}
+
+/* helper text below labels */
+#entity_note_label, #entity_version_label, #entity_publish_label,
+#entity_task_label, #publish_history_label, #publish_upstream_label,
+#publish_downstream_label, #version_note_label, #version_publish_label
+{
+    font-size: 10px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+#button, #action_button {
+    border: 1px solid rgba(50, 50, 50, 50%);
+    background-color: rgba(50, 50, 50, 15%);
+    border-radius: 2px;
+}
+
+QPushButton#action_button:hover {
+    background-color: rgba(200, 200, 200, 18%);
+}
+
+QPushButton#button:hover {
+    background-color: rgba(200, 200, 200, 18%);
+}
+
+
+/****************************************************************/
+/* Info tab showing all shotgun fields 							*/
+
+
+FieldNameLabel {
+    
+    padding: 8px;
+    /* there seems to be an odd bug where border-bottom isn't evaluated
+       unless there is a border top, so add a transparent line... */
+    border-top: 1px dotted rgba(0,0,0,0%);
+    color: rgba(200, 200, 200, 40%);
+    border-bottom: 1px dotted rgba(200, 200, 200, 18%);
+}
+
+FieldValueLabel {
+    padding: 8px;
+    /* there seems to be an odd bug where border-bottom isn't evaluated
+       unless there is a border top, so add a transparent line... */
+    border-top: 1px dotted rgba(0,0,0,0%);
+    border-bottom: 1px dotted rgba(200, 200, 200, 18%);
+}
+
+
+/****************************************************************/
+/* Navigation: Home, previous, next 							*/
+
+QToolButton {
+    border: none;
+}
+
+QToolButton:hover {
+    border: none;
+    border-radius: 2px;
+    background-color: rgba(200, 200, 200, 18%);
+}
+
+QToolButton:pressed {
+    border: none;
+    border-radius: 2px;
+    background-color: rgba(200, 200, 200, 35%);
+}
+
+
+/****************************************************************/
+/* Work area buttons in header					                */
+
+WorkAreaButton[is_expanded="true"] {
+    background-color: rgba(200, 200, 200, 18%);
+    border-radius: 2px;
+    border: none;
+}
+
+WorkAreaButton[is_expanded="true"]:pressed  {
+    background-color: rgba(200, 200, 200, 35%);
+    border-radius: 2px;
+    border: none;
+}
+
+
+/****************************************************************/
+/* Work area buttons in listings				                */
+
+FloatingWorkAreaButton {
+    background-color: rgba(20, 20, 20, 35%);
+    border-radius: 2px;
+    border: none;
+}
+
+FloatingWorkAreaButton[is_expanded="true"] {
+    background-color: rgba(20, 20, 20, 50%);
+    border-radius: 2px;
+    border: none;
+}
+
+FloatingWorkAreaButton[is_expanded="true"]:pressed  {
+    background-color: rgba(20, 20, 20, 70%);
+    border-radius: 2px;
+    border: none;
+}
+
+
+/****************************************************************/
+/* Top details area  				 							*/
+
+
+#details_text_header {
+    padding-left: 2px;
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+}
+
+#details_text_middle {
+    padding-left: 0px;
+    padding-left: 8px;
+}
+
+QWidget#top_group {
+    background-color: rgba(255, 255, 255, 10%);
+    border-radius: 3px;
+}
+
+QFrame#line {
+    border-top: 1px dotted #888;
+}
+
+#list_item_top_right {
+    color: rgba(200, 200, 200, 40%);
+}
+
+
+/****************************************************************/
+/* Styling for the nav tree. */
+
+#hierarchy_label {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+QTreeView::item {
+    padding: 6px;
+}
+
+QTreeView {
+    font-size: 11px;
+    font-weight: 100;
+}
+
+
+/****************************************************************/
+/* Styling for the choose work area dialog. */
+
+WorkAreaDialog #top_text {
+    font-size: 18px;
+    font-weight: 100;
+    color: #fff;
+    margin-left: 10px;
+}
+
+WorkAreaDialog #top_frame {
+    border-radius: 3px;
+    background-color: {{SG_HIGHLIGHT_COLOR}};
+}
+
+WorkAreaDialog #task_list {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+
+WorkAreaDialog #task_list::item {
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgba(255, 255, 255, 10%);
+}
+
+WorkAreaDialog #task_list::item:selected {
+    background-color: {{SG_HIGHLIGHT_COLOR}};
+}
+
+WorkAreaDialog #task_name {
+    font-size: 14px;
+    font-weight: 100;
+    border: none;
+}
+
+WorkAreaDialog #step_combo {
+    font-size: 14px;
+    font-weight: 100;
+}
+

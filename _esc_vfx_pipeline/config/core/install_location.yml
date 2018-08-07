@@ -1,0 +1,9 @@
+# Shotgun Pipeline Toolkit configuration file
+# This file reflects the paths in the pipeline configuration
+# entity which is associated with this location
+
+Windows: '\\hiro\pipeline\configs\shotgun\_esc_vfx_pipeline'
+Darwin: ''
+Linux: '/escape/shares/pipeline/configs/shotgun/_esc_vfx_pipeline'
+
+# End of file.

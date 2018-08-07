@@ -1,0 +1,9 @@
+# This file has been auto generated.
+# Please do not edit by hand.
+
+documentation_url: https://support.shotgunsoftware.com/hc/en-us/articles/219039808
+features: {bootstrap.lean_config.version: 1}
+requires_shotgun_version: v5.0.0
+version: v0.18.148
+
+# end of file.
