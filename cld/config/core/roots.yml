@@ -7,6 +7,6 @@ primary:
   linux_path: /escape/shares/SCMA/projects
   mac_path: /escape/shares/SCMA/projects
   shotgun_storage_id: 9
-  windows_path: p:\
+  windows_path: s:\
 
 # End of file.
